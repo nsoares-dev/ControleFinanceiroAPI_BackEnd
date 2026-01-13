@@ -1,0 +1,91 @@
+[
+  {
+    "ContainingType": "ControleFinanceiro.Controllers.DespesaController",
+    "Method": "CriarDespesa",
+    "RelativePath": "API/Despesa/CriarDespesa",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "despesa",
+        "Type": "ControleFinanceiro.Models.Despesa.DespesaPost",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ControleFinanceiro.Controllers.UsuarioController",
+    "Method": "ConsultarUsuario",
+    "RelativePath": "API/Usuario/ConsultarUsuario/{usuarioId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "usuarioId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ControleFinanceiro.Controllers.UsuarioController",
+    "Method": "CriarUsuario",
+    "RelativePath": "API/Usuario/CriarUsuario",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Nome",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Login",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Senha",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "TipoUsuario",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FotoPerfil",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ControleFinanceiro.Controllers.UsuarioController",
+    "Method": "Login",
+    "RelativePath": "API/Usuario/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "usuario",
+        "Type": "ControleFinanceiro.Models.Usuario.UsuarioLogin",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
