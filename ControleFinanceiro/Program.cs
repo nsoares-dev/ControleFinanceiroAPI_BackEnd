@@ -18,6 +18,18 @@ namespace ControleFinanceiro
 
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
+
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("CorsPolicy", policy =>
+                {
+                    policy
+                        .AllowAnyOrigin()
+                        .AllowAnyHeader()
+                        .AllowAnyMethod();
+                });
+            });
+
             builder.Services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo
@@ -54,7 +66,7 @@ namespace ControleFinanceiro
 
 
             builder.Services.AddScoped<IUsuarioInterface, UsuarioService>();
-            builder.Services.AddScoped<IDespesaInterface, DespesaService>();
+            builder.Services.AddScoped<ITransacaoInterface, TransacaoService>();
             builder.Services.AddScoped<TokenService>();
 
 
@@ -106,6 +118,7 @@ namespace ControleFinanceiro
             }
 
             app.UseHttpsRedirection();
+            app.UseCors("CorsPolicy");
             app.UseAuthentication();
             app.UseAuthorization();
 

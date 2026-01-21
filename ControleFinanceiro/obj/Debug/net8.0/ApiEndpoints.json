@@ -1,15 +1,77 @@
 [
   {
-    "ContainingType": "ControleFinanceiro.Controllers.DespesaController",
-    "Method": "CriarDespesa",
-    "RelativePath": "API/Despesa/CriarDespesa",
+    "ContainingType": "ControleFinanceiro.Controllers.CartaoController",
+    "Method": "GetCartoes",
+    "RelativePath": "API/Cartao",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ControleFinanceiro.Controllers.CategoriaController",
+    "Method": "GetCategorias",
+    "RelativePath": "API/Categoria",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ControleFinanceiro.Controllers.GastoController",
+    "Method": "GetGasto",
+    "RelativePath": "API/Gasto",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ControleFinanceiro.Controllers.TransacaoController",
+    "Method": "ConsultarTransacoes",
+    "RelativePath": "API/Transacao/ConsultarTransacoes/{transacaoId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "transacaoId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ControleFinanceiro.Controllers.TransacaoController",
+    "Method": "ConsultarTransacoesDetalhes",
+    "RelativePath": "API/Transacao/ConsultarTransacoesDetalhes/{transacaoId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "transacaoId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ControleFinanceiro.Controllers.TransacaoController",
+    "Method": "CriarTransacao",
+    "RelativePath": "API/Transacao/CriarTransacao",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "despesa",
-        "Type": "ControleFinanceiro.Models.Despesa.DespesaPost",
+        "Name": "transacao",
+        "Type": "ControleFinanceiro.Models.Transacao.TransacaoPost",
         "IsRequired": true
       }
     ],

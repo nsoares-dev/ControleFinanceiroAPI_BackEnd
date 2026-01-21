@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\ControleFinanceiro\\BACKEND\\ControleFinanceiro\\ControleFinanceiro\\ControleFinanceiro.csproj": {}
+    "D:\\ControleFinanceiro\\BACKEND\\ControleFinanceiroAPI_BackEnd\\ControleFinanceiro\\ControleFinanceiro.csproj": {}
   },
   "projects": {
-    "D:\\ControleFinanceiro\\BACKEND\\ControleFinanceiro\\ControleFinanceiro\\ControleFinanceiro.csproj": {
+    "D:\\ControleFinanceiro\\BACKEND\\ControleFinanceiroAPI_BackEnd\\ControleFinanceiro\\ControleFinanceiro.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ControleFinanceiro\\BACKEND\\ControleFinanceiro\\ControleFinanceiro\\ControleFinanceiro.csproj",
+        "projectUniqueName": "D:\\ControleFinanceiro\\BACKEND\\ControleFinanceiroAPI_BackEnd\\ControleFinanceiro\\ControleFinanceiro.csproj",
         "projectName": "ControleFinanceiro",
-        "projectPath": "D:\\ControleFinanceiro\\BACKEND\\ControleFinanceiro\\ControleFinanceiro\\ControleFinanceiro.csproj",
+        "projectPath": "D:\\ControleFinanceiro\\BACKEND\\ControleFinanceiroAPI_BackEnd\\ControleFinanceiro\\ControleFinanceiro.csproj",
         "packagesPath": "C:\\Users\\nicol\\.nuget\\packages\\",
-        "outputPath": "D:\\ControleFinanceiro\\BACKEND\\ControleFinanceiro\\ControleFinanceiro\\obj\\",
+        "outputPath": "D:\\ControleFinanceiro\\BACKEND\\ControleFinanceiroAPI_BackEnd\\ControleFinanceiro\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -44,7 +44,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -86,7 +86,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

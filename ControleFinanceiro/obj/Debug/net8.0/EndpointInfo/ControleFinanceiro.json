@@ -5,30 +5,112 @@
     "version": "v1"
   },
   "paths": {
-    "/API/Despesa/CriarDespesa": {
+    "/API/Cartao": {
+      "get": {
+        "tags": [
+          "Cartao"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/API/Categoria": {
+      "get": {
+        "tags": [
+          "Categoria"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/API/Gasto": {
+      "get": {
+        "tags": [
+          "Gasto"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/API/Transacao/CriarTransacao": {
       "post": {
         "tags": [
-          "Despesa"
+          "Transacao"
         ],
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/DespesaPost"
+                "$ref": "#/components/schemas/TransacaoPost"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/DespesaPost"
+                "$ref": "#/components/schemas/TransacaoPost"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/DespesaPost"
+                "$ref": "#/components/schemas/TransacaoPost"
               }
             }
           }
         },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/API/Transacao/ConsultarTransacoes/{transacaoId}": {
+      "get": {
+        "tags": [
+          "Transacao"
+        ],
+        "parameters": [
+          {
+            "name": "transacaoId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/API/Transacao/ConsultarTransacoesDetalhes/{transacaoId}": {
+      "get": {
+        "tags": [
+          "Transacao"
+        ],
+        "parameters": [
+          {
+            "name": "transacaoId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -161,10 +243,56 @@
   },
   "components": {
     "schemas": {
-      "DespesaPost": {
+      "Cartao": {
+        "enum": [
+          "NUBANK",
+          "INTER",
+          "ITAU",
+          "MERCADOPAGO"
+        ],
+        "type": "string"
+      },
+      "TipoCategoria": {
+        "enum": [
+          "ALIMENTACAO",
+          "CONTAS",
+          "TRANSPORTE",
+          "ENTRETENIMENTO",
+          "SALARIO",
+          "SAUDE",
+          "FREELANCE",
+          "PIX",
+          "ELETRONICOS",
+          "OUTROS"
+        ],
+        "type": "string"
+      },
+      "TipoGasto": {
+        "enum": [
+          "CARTAODEBITO",
+          "CARTAOCREDITO",
+          "PIX"
+        ],
+        "type": "string"
+      },
+      "TipoTransacao": {
+        "enum": [
+          "Receita",
+          "Despesa"
+        ],
+        "type": "string"
+      },
+      "TipoUsuario": {
+        "enum": [
+          "ADMIN",
+          "USUARIO_COMUM"
+        ],
+        "type": "string"
+      },
+      "TransacaoPost": {
         "type": "object",
         "properties": {
-          "nomeDespesa": {
+          "nomeTransacao": {
             "type": "string",
             "nullable": true
           },
@@ -179,7 +307,16 @@
           "tipoGastoId": {
             "$ref": "#/components/schemas/TipoGasto"
           },
-          "dataDespesa": {
+          "tipoTransacaoId": {
+            "$ref": "#/components/schemas/TipoTransacao"
+          },
+          "cartaoId": {
+            "$ref": "#/components/schemas/Cartao"
+          },
+          "tipoCategoriaId": {
+            "$ref": "#/components/schemas/TipoCategoria"
+          },
+          "dataTransacao": {
             "type": "string",
             "format": "date-time"
           },
@@ -201,21 +338,6 @@
           }
         },
         "additionalProperties": false
-      },
-      "TipoGasto": {
-        "enum": [
-          "CARTAODEBITO",
-          "CARTAOCREDITO",
-          "PIX"
-        ],
-        "type": "string"
-      },
-      "TipoUsuario": {
-        "enum": [
-          "ADMIN",
-          "USUARIO_COMUM"
-        ],
-        "type": "string"
       },
       "UsuarioLogin": {
         "type": "object",

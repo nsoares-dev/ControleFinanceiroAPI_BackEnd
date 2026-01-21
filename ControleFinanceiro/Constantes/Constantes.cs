@@ -10,8 +10,10 @@
 
         #region Despesa
 
-        public const string CRIARDESPESA = "CF_CriarDespesa_C";
-        public const string CRIARDESPESAPARCELADA = "CF_CriarDespesaParcelada_C";
+        public const string CRIARTRANSACAO = "CF_CriarTransacao_C";
+        public const string CRIARTRANSACAOPARCELADA = "CF_CriarTransacaoParcelada_C";
+        public const string CONSULTARTRANSACOES = "CF_ConsultarTransacoes_R";
+        public const string CONSULTARDETALHESTRANSACAO = "CF_ConsultarDetalhesTransacao_R";
 
         #endregion
     }
