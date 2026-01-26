@@ -67,6 +67,7 @@ namespace ControleFinanceiro
 
             builder.Services.AddScoped<IUsuarioInterface, UsuarioService>();
             builder.Services.AddScoped<ITransacaoInterface, TransacaoService>();
+            builder.Services.AddScoped<IDashboardInterface, DashboardService>();
             builder.Services.AddScoped<TokenService>();
 
 

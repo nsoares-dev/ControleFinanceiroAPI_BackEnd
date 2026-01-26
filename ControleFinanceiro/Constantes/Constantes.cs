@@ -16,5 +16,11 @@
         public const string CONSULTARDETALHESTRANSACAO = "CF_ConsultarDetalhesTransacao_R";
 
         #endregion
+
+        #region Dashboard
+
+        public const string DASHBOARDINICIO = "CF_DashBoardInicio_R";
+
+        #endregion
     }
 }

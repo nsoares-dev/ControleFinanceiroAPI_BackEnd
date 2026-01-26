@@ -20,6 +20,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "ControleFinanceiro.Controllers.DashboardController",
+    "Method": "ObterDashboardInicio",
+    "RelativePath": "API/Dashboard/DashboardInicio",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "ControleFinanceiro.Controllers.GastoController",
     "Method": "GetGasto",
     "RelativePath": "API/Gasto",

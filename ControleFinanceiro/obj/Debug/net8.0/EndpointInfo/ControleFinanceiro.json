@@ -29,6 +29,18 @@
         }
       }
     },
+    "/API/Dashboard/DashboardInicio": {
+      "get": {
+        "tags": [
+          "Dashboard"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/API/Gasto": {
       "get": {
         "tags": [
