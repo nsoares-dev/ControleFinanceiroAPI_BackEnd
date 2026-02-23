@@ -41,6 +41,27 @@
         }
       }
     },
+    "/API/Dashboard/DashboardReports": {
+      "get": {
+        "tags": [
+          "Dashboard"
+        ],
+        "parameters": [
+          {
+            "name": "period",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/API/Gasto": {
       "get": {
         "tags": [

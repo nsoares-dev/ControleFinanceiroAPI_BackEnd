@@ -40,5 +40,27 @@ namespace ControleFinanceiro.Controllers
             }
 
         }
+        [HttpGet]
+        [Route("DashboardReports")]
+        public async Task<IActionResult> DashboardReports([FromQuery] string period)
+        {
+            try
+            {
+                var usuarioId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)!.Value);
+
+                var dash = await _dashboardService.DashboardReports(usuarioId, period);
+
+                return Ok(dash);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new
+                {
+                    mensagem = "Erro interno do servidor.",
+                    detalhe = ex.Message
+                });
+            }
+
+        }
     }
 }

@@ -20,7 +20,12 @@
         #region Dashboard
 
         public const string DASHBOARDINICIO = "CF_DashBoardInicio_R";
-
+        public const string DASHBOARDREPORTS_RESUMO = "CF_DashBoardReportsResumo_R";
+        public const string DASHBOARDREPORTS_CATEGORIA = "CF_DashBoardReportsCategorias_R";
+        public const string DASHBOARDREPORTS_CARTAO = "CF_DashBoardReportsCartao_R";
+        public const string DASHBOARDREPORTS_TOPDESPESAS = "CF_DashBoardReportsTopDespesas_R";
+        public const string DASHBOARDREPORTS_TENDENCIASWEEK = "CF_DashBoardReportsTendenciasWeek_R";
+        public const string DASHBOARDREPORTS_TENDENCIASMensal = "CF_DashBoardReportsTendenciasMensal_R";
         #endregion
     }
 }

@@ -30,6 +30,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "ControleFinanceiro.Controllers.DashboardController",
+    "Method": "DashboardReports",
+    "RelativePath": "API/Dashboard/DashboardReports",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "period",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "ControleFinanceiro.Controllers.GastoController",
     "Method": "GetGasto",
     "RelativePath": "API/Gasto",

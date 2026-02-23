@@ -14,8 +14,8 @@ namespace ControleFinanceiro.Controllers
             {
                 new { Id = 1, Nome = "NUBANK" },
                 new { Id = 2, Nome = "INTER" },
-                new { Id = 3, Nome = "ITAU" },
-                new { Id = 4, Nome = "MERCADOPAGO" }
+                new { Id = 3, Nome = "MERCADOPAGO" },
+                new { Id = 4, Nome = "ITAU" }
             };
 
             return Ok(cartoes);
